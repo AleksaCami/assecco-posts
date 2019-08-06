@@ -1,7 +1,8 @@
 
   <div class="py-5">
     <div class="container">
-      <h2>All posts</h2>
+      <h1>All posts</h1>
+      <button [routerLink]="['/add-post']" class="form-inline btn btn-primary">Add post</button>
       <div class="row hidden-md-up mt-2">
         <div class="col-md-4" *ngFor="let post of allPosts">
           <div class="card mb-3">
