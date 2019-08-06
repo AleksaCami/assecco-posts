@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { retry } from 'rxjs/operators';
-
-import { Photo } from '../../services/models/photo.model';
+import { AlbumsService } from '../../services/albums/albums.service';
 
 @Component({
   selector: 'app-album',
@@ -12,10 +9,10 @@ import { Photo } from '../../services/models/photo.model';
   styleUrls: ['./album.component.scss']
 })
 export class AlbumComponent implements OnInit {
-  public id: [];
+  public id: number;
   public photos = [];
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute, public albumsService: AlbumsService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -24,15 +21,8 @@ export class AlbumComponent implements OnInit {
     this.getPhotos();
   }
 
-  getPhotosOfAlbum(): Observable<Photo[]> {
-    return this.http.get<Photo[]>(`https://jsonplaceholder.typicode.com/photos?albumId=${this.id}`)
-      .pipe(
-        retry(5)
-      );
-  }
-
   getPhotos() {
-    this.getPhotosOfAlbum().subscribe(results => {
+    this.albumsService.getPhotosOfAlbum(this.id).subscribe(results => {
       if (!results) {
         return;
       }
