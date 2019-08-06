@@ -2,3 +2,4 @@
 2. Tokom inicijalizacije selektovan scss kao preprocessor za CSS
 3. Instaliran Bootstrap npm paket
 4. Osnovne komponente sa rutiranjem
+5. Osnovni sticky navbar
