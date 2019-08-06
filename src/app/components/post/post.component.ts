@@ -11,6 +11,7 @@ import { Post } from '../../services/posts/posts.model';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
+
 export class PostComponent implements OnInit {
   public id: [];
   public postData = [];
