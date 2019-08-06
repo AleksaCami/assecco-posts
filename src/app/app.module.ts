@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // KOMPONENTE
 import { AppComponent } from './app.component';
@@ -20,6 +21,11 @@ import { AlbumComponent } from './components/album/album.component';
 // SERVISI
 import { PostsService } from './services/posts/posts.service';
 import { UsersService } from './services/users/users.service';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
+
+// MISC
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -32,14 +38,16 @@ import { UsersService } from './services/users/users.service';
     AddPostComponent,
     UsersComponent,
     AlbumsComponent,
-    AlbumComponent
+    AlbumComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [
     PostsService,
@@ -47,4 +55,8 @@ import { UsersService } from './services/users/users.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    library.add(faTrash);
+  }
+}
