@@ -37,7 +37,6 @@ export class AlbumComponent implements OnInit {
         return;
       }
       this.photos = results;
-      console.log(this.photos);
     });
   }
 

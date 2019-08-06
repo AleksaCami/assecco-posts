@@ -25,4 +25,11 @@ export class PostsComponent implements OnInit {
     });
   }
 
+  deleteSelected(postId: number) {
+    console.log(postId);
+    this.postsService.deletePost(postId).subscribe(() => {
+      alert('Successfully deleted item');
+    });
+  }
+
 }

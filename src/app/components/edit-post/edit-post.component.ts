@@ -43,7 +43,7 @@ export class EditPostComponent implements OnInit {
       this.BODY = params.body;
     });
     this.form = this.fb.group({
-      userId: ['1', Validators.required],
+      userId: [`${this.USER_ID}`, Validators.required],
       title: ['', Validators.required],
       body: ['', Validators.required]
     });
@@ -68,9 +68,8 @@ export class EditPostComponent implements OnInit {
       )
       .subscribe(() => {
         alert('successfully edited');
+        this.router.navigate(['/posts']);
       });
-    this.form.reset();
-    this.router.navigate(['/posts']);
   }
 
   private handleError(error: HttpErrorResponse) {
