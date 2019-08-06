@@ -9,7 +9,7 @@
               <h4 class="card-title">{{ post.title }}</h4>
               <p class="card-text p-y-1">{{ post.body }}</p>
               <button class='btn btn-outline-primary mr-1' [routerLink]="['/posts', post.id ]">Open post</button>
-              <button class='btn btn-outline-secondary'>Edit post</button>
+              <button class='btn btn-outline-secondary' [routerLink]="['/edit-post', post.id, post.userId, post.title, post.body ]">Edit post</button>
             </div>
           </div>
         </div>
