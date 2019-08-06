@@ -3,3 +3,7 @@
 3. Instaliran Bootstrap npm paket
 4. Osnovne komponente sa rutiranjem
 5. Osnovni sticky navbar
+6. Basic 404 stranica
+7. Prikaz postova na posts komponenti
+8. Otvaranje posta i prosledjivanje ID posta kroz router
+9. Prikaz sadrzada posta na post komponenti, prosledjivanje id-a kroz router, i izvlacenje id-a putem ActivatedRoute modula
