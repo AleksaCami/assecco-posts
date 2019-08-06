@@ -10,7 +10,9 @@
               <p class="card-text p-y-1">{{ post.body }}</p>
               <button class='btn btn-outline-primary mr-1' [routerLink]="['/posts', post.id ]">Open post</button>
               <button class='btn btn-outline-warning' [routerLink]="['/edit-post', post.id, post.userId, post.title, post.body ]">Edit post</button>
-              <button class='btn btn-outline-danger ml-1' (click)="deleteSelected(post.id)">Delete post</button>
+              <button class='btn btn-outline-danger ml-1' (click)="deleteSelected(post.id)">
+                <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+              </button>
             </div>
           </div>
         </div>
