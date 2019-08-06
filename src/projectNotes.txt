@@ -1,3 +1,4 @@
 1. Inicijalizovan projekat koristeci angular cli - ng new <ime-projekta>
 2. Tokom inicijalizacije selektovan scss kao preprocessor za CSS
 3. Instaliran Bootstrap npm paket
+4. Osnovne komponente sa rutiranjem
