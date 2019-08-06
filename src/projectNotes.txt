@@ -8,3 +8,5 @@
 8. Otvaranje posta i prosledjivanje ID posta kroz router
 9. Prikaz sadrzada posta na post komponenti, prosledjivanje id-a kroz router, i izvlacenje id-a putem ActivatedRoute modula
 10. Lista svih komentara na comments komponenti
+11. Lista komentara ispod svakog posta
+12. Listanje svih korisnika na users komponenti

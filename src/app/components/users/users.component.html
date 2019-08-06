@@ -1,0 +1,15 @@
+<div class='container'>
+  <div class="list-group py-4" *ngFor="let user of allUsers">
+    <span class="list-group-item list-group-item-action mb-1">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ user.name }}</h5>
+        <small>Email: {{ user.email }}</small>
+        <small>Phone number: {{ user.phone }}</small>
+      </div>
+      <p class="mb-1"><b>Company:</b> {{ user.company.name }} {{ user.company.catchPhrase }}</p>
+      <small>Address: {{ user.address.street }} {{ user.address.suite }}</small>
+      <br>
+      <small>Zipcode: {{ user.address.zipcode }}</small>
+    </span>
+  </div>
+</div>

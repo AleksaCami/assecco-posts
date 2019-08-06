@@ -11,10 +11,11 @@ import { PostComponent } from './components/post/post.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
+import { UsersComponent } from './components/users/users.component';
 
 // SERVISI
 import { PostsService } from './services/posts/posts.service';
-import { CommentsService } from './services/comments/comments.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { CommentsService } from './services/comments/comments.service';
     PostComponent,
     CommentsComponent,
     PageNotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddPostComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,7 @@ import { CommentsService } from './services/comments/comments.service';
     HttpClientModule
   ],
   providers: [
-    PostsService,
-    CommentsService
+    PostsService
   ],
   bootstrap: [AppComponent]
 })

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 
 import { Post } from '../../services/posts/posts.model';
+import { Comment } from '../../services/comments/comment.model';
 
 @Component({
   selector: 'app-post',
@@ -15,6 +16,7 @@ import { Post } from '../../services/posts/posts.model';
 export class PostComponent implements OnInit {
   public id: [];
   public postData = [];
+  public postComments = [];
 
   constructor(public http: HttpClient, private route: ActivatedRoute) { }
 
@@ -32,12 +34,29 @@ export class PostComponent implements OnInit {
       );
   }
 
+  getPostComments(): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`https://jsonplaceholder.typicode.com/comments?postId=${this.id}`)
+    .pipe(
+      retry(5)
+    );
+  }
+
   getPost() {
     this.getPostData().subscribe(results => {
       if (!results) {
         return;
       }
       this.postData = results;
+    });
+    this.getComments();
+  }
+
+  getComments() {
+    this.getPostComments().subscribe(results => {
+      if (!results) {
+        return;
+      }
+      this.postComments = results;
     });
   }
 

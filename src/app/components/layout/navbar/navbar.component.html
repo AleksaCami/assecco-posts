@@ -1,3 +1,13 @@
-<nav class="navbar sticky-top navbar-dark bg-primary">
-  <h1 [routerLink]="['/posts']">Assecco Posts</h1>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+  <h1 class='mr-2' [routerLink]="['/posts']">Assecco Posts</h1>
+    <ul class="navbar-nav ml-5">
+      <li class="nav- mr-2">
+        <button [routerLink]="['/add-post']" class="form-inline btn btn-outline-primary"
+          style='color: white; border-color: white;'>Add post</button>
+      </li>
+      <li class="nav-item">
+        <button [routerLink]="['/users']" class="btn btn-outline-primary"
+          style='color: white; border-color: white;'>Users</button>
+      </li>
+    </ul>
 </nav>
