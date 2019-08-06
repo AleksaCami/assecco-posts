@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PostsService } from '../../services/posts/posts.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { PostsService } from '../../services/posts/posts.service';
 
 export class PostsComponent implements OnInit {
   public allPosts = [];
+  // @ViewChild('deleteSwal') private deleteSwal: SwalComponent;
 
   constructor(public postsService: PostsService) { }
 
@@ -30,6 +31,10 @@ export class PostsComponent implements OnInit {
     this.postsService.deletePost(postId).subscribe(() => {
       alert('Successfully deleted item');
     });
+  }
+
+  handleRefusal(dismissMethod: string) {
+    console.log(dismissMethod);
   }
 
 }
