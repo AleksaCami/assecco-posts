@@ -1,0 +1,7 @@
+<div class='container'>
+  <h1 class='py-4'>All albums</h1>
+  <div class="list-group py-2" *ngFor="let album of allAlbums">
+    <button type="button" class="list-group-item list-group-item-action"><b>{{ album.id }}.
+        {{ album.title }}</b></button>
+  </div>
+</div>

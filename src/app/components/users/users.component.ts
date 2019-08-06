@@ -21,7 +21,6 @@ export class UsersComponent implements OnInit {
         return;
       }
       this.allUsers = results;
-      console.log(this.allUsers);
     });
   }
 

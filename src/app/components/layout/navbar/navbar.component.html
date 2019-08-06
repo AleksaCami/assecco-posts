@@ -1,13 +1,17 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
   <h1 class='mr-2' [routerLink]="['/posts']">Assecco Posts</h1>
-    <ul class="navbar-nav ml-5">
-      <li class="nav- mr-2">
+    <ul class="navbar-nav ml-4">
+      <li class="nav ml-2">
         <button [routerLink]="['/add-post']" class="form-inline btn btn-outline-primary"
           style='color: white; border-color: white;'>Add post</button>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ml-2">
         <button [routerLink]="['/users']" class="btn btn-outline-primary"
           style='color: white; border-color: white;'>Users</button>
+      </li>
+      <li class="nav-item ml-2">
+        <button [routerLink]="['/albums']" class="btn btn-outline-primary"
+          style='color: white; border-color: white;'>Albums</button>
       </li>
     </ul>
 </nav>

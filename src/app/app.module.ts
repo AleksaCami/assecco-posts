@@ -13,9 +13,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { UsersComponent } from './components/users/users.component';
+import { AlbumsComponent } from './components/albums/albums.component';
 
 // SERVISI
 import { PostsService } from './services/posts/posts.service';
+import { UsersService } from './services/users/users.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { PostsService } from './services/posts/posts.service';
     PageNotFoundComponent,
     NavbarComponent,
     AddPostComponent,
-    UsersComponent
+    UsersComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { PostsService } from './services/posts/posts.service';
     HttpClientModule
   ],
   providers: [
-    PostsService
+    PostsService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })
