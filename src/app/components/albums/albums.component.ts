@@ -21,7 +21,6 @@ export class AlbumsComponent implements OnInit {
         return;
       }
       this.allAlbums = results;
-      console.log(this.allAlbums);
     });
   }
 

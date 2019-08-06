@@ -8,6 +8,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { UsersComponent } from './components/users/users.component';
 import { AlbumsComponent } from './components/albums/albums.component';
+import { AlbumComponent } from './components/album/album.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'posts/:id/comments', component: CommentsComponent},
   { path: 'users', component: UsersComponent },
   { path: 'albums', component: AlbumsComponent },
+  { path: 'albums/:id', component: AlbumComponent },
   {
     path: '',
     redirectTo: 'posts',

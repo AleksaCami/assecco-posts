@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { UsersComponent } from './components/users/users.component';
 import { AlbumsComponent } from './components/albums/albums.component';
+import { AlbumComponent } from './components/album/album.component';
 
 // SERVISI
 import { PostsService } from './services/posts/posts.service';
@@ -29,7 +30,8 @@ import { UsersService } from './services/users/users.service';
     NavbarComponent,
     AddPostComponent,
     UsersComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

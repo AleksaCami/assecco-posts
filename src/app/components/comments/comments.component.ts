@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 
-import { Comment } from '../../services/comments/comment.model';
+import { Comment } from '../../services/models/comment.model';
 
 @Component({
   selector: 'app-comments',

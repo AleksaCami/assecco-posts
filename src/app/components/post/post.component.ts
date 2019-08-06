@@ -4,8 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 
-import { Post } from '../../services/posts/posts.model';
-import { Comment } from '../../services/comments/comment.model';
+import { Post } from '../../services/models/posts.model';
+import { Comment } from '../../services/models/comment.model';
 
 @Component({
   selector: 'app-post',

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 
-import { Album } from './album.model';
+import { Album } from '../models/album.model';
 
 @Injectable({
   providedIn: 'root'
