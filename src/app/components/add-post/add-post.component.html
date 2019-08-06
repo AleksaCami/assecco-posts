@@ -1,3 +1,18 @@
-<p>
-  add-post-component works!
-</p>
+<div class='container'>
+  <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form" class='py-4'>
+    <div class="form-group">
+      <input type="number" class="form-control" hidden formControlName="userId">
+    </div>
+    <div class="form-group">
+      <label>Post Title</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label>Post Content</label>
+      <textarea class="form-control" rows="3" formControlName="body"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class='btn btn-primary'>Add</button>
+    </div>
+  </form>
+</div>
